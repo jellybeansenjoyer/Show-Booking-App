@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button"
-
-export default function Home() {
+import SwiperComponent from '../components/SwiperComponent';
+import Toolbar from '../components/Toolbar'
+const Page = () => {
   return (
     <div>
-      <Button>Click me</Button>
+      <Toolbar/>
+      <SwiperComponent />
     </div>
-  )
-}
+  );
+};
+
+export default Page;
