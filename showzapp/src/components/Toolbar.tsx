@@ -1,19 +1,21 @@
 "use client"
-import React from 'react'
-import { Input } from "@/components/ui/input"
-import {Image} from 'next/image'
 const Toolbar = ()=> {
     return (
-        <div className='bg-light_shade_gray flex h-20 px-10 py-8 justify-between items-center w-full'>
-           <div className='flex space-x-5 w-1/2 items-center'> 
-            <p className='font-anton font-bold italic text-3xl text-dark_shade_tomato'>AUDITORIUM</p>
-            <Input className='focus-visible:ring-dark_shade_tomato' type="Search" placeholder="Search Events" />
+        <div className="relative bg-main_blue gap-x-36 h-14 items-center py-14 md:py-12 px-12 md:px-14 flex w-full justify-center bg-opacity-85 z-10">
+            <div className="flex gap-3 items-center">
+                <img className="w-14 h-12" src="/ticket_photo.png" />
+                <p className="text-white text-3xl italic font-anton">AUDITO<span className="text-cherry_pink">RIUM</span></p>
             </div>
-            <div className='group flex p-3 gap-2 items-center border border-orange-600 rounded-2xl hover:bg-orange-600 hover:border-white border-2'>
-                <img className="w-6 h-6" src="/metamask.svg"/>
-                <p className='font-bold text-orange-600 text-lg group-hover:text-white'>METAMASK</p>
+            <div className="flex space-x-9 items-center">
+                <p className="text-white font-medium text-lg">HOME</p>
+                <p className="text-white font-medium text-lg">MOVIES</p>
+                <p className="text-white font-medium text-lg">EVENTS</p>
+                <p className="text-white font-medium text-lg">SPORTS</p>
+                <p className="text-white font-medium text-lg">PAGES</p>
+                <p className="text-white font-medium text-lg">BLOG</p>
+                <p className="text-white font-medium text-lg">CONTACT</p>
+                <p className="py-4 px-10 text-white font-medium bg-gradient-to-r from-cherry_pink to-bright_purple rounded-full text-lg">JOIN US</p>
             </div>
-            
         </div>
     )
 }

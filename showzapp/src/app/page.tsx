@@ -1,10 +1,10 @@
-import SwiperComponent from '../components/SwiperComponent';
-import Toolbar from '../components/Toolbar'
+import Toolbar from "@/components/Toolbar";
+import Hero from "@/components/Hero";
 const Page = () => {
   return (
     <div>
-      <Toolbar/>
-      <SwiperComponent />
+      <Toolbar />
+      <Hero />
     </div>
   );
 };

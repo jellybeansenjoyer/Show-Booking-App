@@ -16,7 +16,11 @@ export default {
 			light_shade_beige:'#D8C3A5',
 			dark_shade_gray:'#8E8D8A',
 			light_shade_tomato:'#E98074',
-			dark_shade_tomato:'#E85A4F'
+			dark_shade_tomato:'#E85A4F',
+			main_blue:'#04123E',
+			cherry_pink:'#F54550',
+			bright_purple:'#5560FF'
+
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
