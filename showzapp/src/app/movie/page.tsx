@@ -1,7 +1,7 @@
 import Toolbar from "@/components/Toolbar";
 import Hero from "@/components/Hero"
-import Main from "@/components/Events"
 import Search from "@/components/Search"
+import Movies from "@/components/Movies";
 const Page = () => {
     return (
     
@@ -9,7 +9,7 @@ const Page = () => {
         <Toolbar/>
         <Hero wallpaper="cinemahero.jpg" message="BOOK YOUR TICKETS FOR MOVIE" subtext="Safe, secure, reliable ticketing.Your ticket to live entertainment!"/>
         <Search/>
-        <Main />
+        <Movies />
       </div>
     );
   };
