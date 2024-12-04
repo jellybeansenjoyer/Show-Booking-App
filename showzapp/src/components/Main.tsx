@@ -1,10 +1,20 @@
+
+'use client'
+import { useRouter } from 'next/navigation';
+
+
 const Main = () => {
+const router = useRouter();
+
+  const goToAbout = () => {
+    router.push('/about');
+  };
     return (
         <>
         <div className="w-full h-full flex flex-col justify-center bg-main_blue px-80"> 
                 <div className="flex justify-between items-center">
                     <h1 className="text-white text-6xl font-bold">MOVIES</h1>
-                    <h1 className="text-green-400 font-bold">View all</h1>
+                    <h1 className="text-green-400 font-bold" onClick={goToAbout}>View all</h1>
                 </div>
                 <div className="h-0.5 bg-gray-600 mt-4 mb-8"> </div>
                 <div className="mt-4 grid grid-cols-3 gap-4">
@@ -47,7 +57,7 @@ const Main = () => {
         <div className="w-full h-full flex flex-col justify-center bg-main_blue px-80 mt-20"> 
                 <div className="flex justify-between items-center">
                     <h1 className="text-white text-6xl font-bold">EVENTS</h1>
-                    <h1 className="text-green-400 font-bold">View all</h1>
+                    <h1 className="text-green-400 font-bold" onClick={goToAbout} >View all</h1>
                 </div>
                 <div className="h-0.5 bg-gray-600 mt-4 mb-8"> </div>
                 <div className="mt-4 grid grid-cols-3 gap-4">
@@ -91,7 +101,7 @@ const Main = () => {
         <div className="w-full h-full flex flex-col justify-center bg-main_blue px-80 mt-20"> 
                 <div className="flex justify-between items-center">
                     <h1 className="text-white text-6xl font-bold">SPORTS</h1>
-                    <h1 className="text-green-400 font-bold">View all</h1>
+                    <h1 className="text-green-400 font-bold" onClick={goToAbout} >View all</h1>
                 </div>
                 <div className="h-0.5 bg-gray-600 mt-4 mb-8"> </div>
                 <div className="mt-4 grid grid-cols-3 gap-4">
