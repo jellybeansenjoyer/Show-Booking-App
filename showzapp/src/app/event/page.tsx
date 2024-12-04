@@ -1,6 +1,6 @@
 import Toolbar from "@/components/Toolbar";
 import Hero from "@/components/Hero"
-import Main from "@/components/Main"
+import Events from "@/components/Events"
 import Search from "@/components/Search"
 const Page = () => {
     return (
@@ -9,7 +9,7 @@ const Page = () => {
         <Toolbar/>
         <Hero wallpaper="concert.jpg" message="BOOK YOUR TICKETS FOR EVENTS" subtext="Book Hot Events happening in your city at a promise of Security"/>
         <Search/>
-        <Main />
+        <Events />
       </div>
     );
   };

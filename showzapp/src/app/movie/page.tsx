@@ -1,6 +1,6 @@
 import Toolbar from "@/components/Toolbar";
 import Hero from "@/components/Hero"
-import Main from "@/components/Main"
+import Main from "@/components/Events"
 import Search from "@/components/Search"
 const Page = () => {
     return (
