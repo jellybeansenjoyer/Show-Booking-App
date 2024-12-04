@@ -90,9 +90,9 @@ useEffect(() => {
                 <div className="h-0.5 bg-gray-600 mt-4 mb-8"> </div>
                 <div className="mt-4 grid grid-cols-3 gap-4">
                 {movies.map((movie, index) => (
-            <div key={index} className="group relative group flex flex-col rounded-2xl border hover:border-green-400">
+            <div key={index} className="group relative group overflow-hidden flex flex-col rounded-2xl border hover:border-green-400">
               <img
-                className="w-auto h-96 object-cover overflow-hidden transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+                className="w-auto h-96 object-cover  transform transition-transform duration-300 ease-in-out group-hover:scale-105"
                 src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} // Event image URL
                 alt={movie.original_title}
               />
@@ -118,9 +118,9 @@ useEffect(() => {
                 <div className="h-0.5 bg-gray-600 mt-4 mb-8"> </div>
                 <div className="mt-4 grid grid-cols-3 gap-4">
                 {events.map((event, index) => (
-            <div key={index} className="group relative group flex flex-col rounded-2xl border hover:border-green-400">
+            <div key={index} className="group relative group overflow-hidden flex flex-col rounded-2xl border hover:border-green-400">
               <img
-                className="w-auto h-96 object-cover overflow-hidden transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+                className="w-auto h-96 object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
                 src={event.images[0].url} // Event image URL
                 alt={event.name}
               />
@@ -144,9 +144,9 @@ useEffect(() => {
                 </div>
                 <div className="h-0.5 bg-gray-600 mt-4 mb-8"> </div>
                 <div className="mt-4 grid grid-cols-3 gap-4">
-                    <div className="relative group flex flex-col rounded-2xl border hover:border-green-400">
+                    <div className="relative group flex flex-col overflow-hidden rounded-2xl border hover:border-green-400">
                         
-                        <img className="w-auto h-96 object-cover overflow-hidden transform transition-transform duration-300 ease-in-out group-hover:scale-110" src="football.jpg"></img>
+                        <img className="w-auto h-96 object-cover  transform transition-transform duration-300 ease-in-out group-hover:scale-110" src="football.jpg"></img>
                         <div className="flex flex-col py-4 px-8">
                             <h1 className="text-white text-2xl">Joker</h1>
                             <div className="h-0.5 bg-gray-600"></div>
