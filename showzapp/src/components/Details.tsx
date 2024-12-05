@@ -18,7 +18,7 @@ const Details: React.FC<Hero3Props> = ({movie}) => {
           try {
             const response = await axios<CastandCrew>(`https://api.themoviedb.org/3/movie/${movie.id}/credits?language=en-US`,{
                 headers:{
-                    "Authorization":"Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1ZmQzOGI0MDFiZWViYWUzNGY0Y2JjNGM2NjVkNmI3ZSIsIm5iZiI6MTczMzIwNTc0MS40NDYsInN1YiI6IjY3NGU5ZWVkYjRmZTQ3ZTdhNDg1ZDJhOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.KjwWZxlbFrTvMdAeMe6Hu7cfwqmvKnogAq5Vrse5OOE",
+                    "Authorization":`Bearer ${process.env.ACCESS_TOKEN}`,
                     "Content-Type":"application/json"
                 }
             });
