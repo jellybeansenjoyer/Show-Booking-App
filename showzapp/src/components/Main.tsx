@@ -162,7 +162,7 @@ useEffect(() => {
         </div>
                 
         </div>
-        <div className="w-full h-full flex flex-col justify-center bg-main_blue px-80 mt-20"> 
+        <div className="w-full h-full flex flex-col justify-center bg-main_blue px-80 mt-20 mb-20"> 
                 <div className="flex justify-between items-center">
                     <h1 className="text-white text-6xl font-bold">EVENTS</h1>
                     <h1 className="text-green-400 font-bold cursor-pointer" onClick={()=>goToAbout("/event")} >View all</h1>

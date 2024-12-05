@@ -12,6 +12,7 @@ import Event from "@/components/Events";
 import Sports from "@/data/Sports";
 import SportsHero from "@/components/SportsHero"
 import SportsDetails from "@/components/SportsDetails"
+import Footer from '@/components/Footer';
 const SportsPage = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -39,7 +40,7 @@ const SportsPage = () => {
       {data ? <SportsHero sports={data} /> : <p>Loading...</p>}
       {data ? <SportsBar sports={data} /> : <p>Loading...</p>}
       {data ? <SportsDetails sports={data} /> : <p>Loading...</p>} 
-    
+      <Footer/>
     </div>
   );
 };
