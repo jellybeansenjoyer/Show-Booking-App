@@ -6,7 +6,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import MovieData from '@/data/Movie';
 import { useSearchParams } from 'next/navigation';
-
+import Bar from '@/components/Bar';
+import Details from '@/components/Details';
 const MoviePage = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -37,6 +38,9 @@ const MoviePage = () => {
     <div className="bg-main_blue w-full h-full">
       <Toolbar />
       {data ? <Hero2 movie={data} /> : <p>Loading...</p>} {/* Conditional rendering */}
+      {data ? <Bar movie={data} /> : <p>Loading...</p>} {/* Conditional rendering */}
+      {data ? <Details movie={data} /> : <p>Loading...</p>} {/* Conditional rendering */}
+    
     </div>
   );
 };
