@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-import Concert from '@/data/Concert';
+import Concert from '@/data/ConcertM';
 import axios from 'axios';
 
 const Events = () => {
@@ -47,7 +47,9 @@ const [events, setEvents] = useState<Event[]>([]);
   const goToAbout = () => {
     router.push('/about');
   };
-
+  const handleEventsClick = (concertId: string) => {
+    router.push(`/eventspage?id=${concertId}`);
+  };
   return (
     <>
       <div className="w-full h-full flex flex-col justify-center bg-main_blue px-80">
@@ -57,7 +59,7 @@ const [events, setEvents] = useState<Event[]>([]);
         <div className="h-0.5 bg-gray-600 mt-4 mb-8"> </div>
         <div className="mt-4 grid grid-cols-3 gap-10">
         {sports.map((sport, index) => (
-            <div key={index} className="group relative group overflow-hidden flex flex-col rounded-2xl border hover:border-green-400 cursor-pointer">
+            <div key={index} className="group relative group overflow-hidden flex flex-col rounded-2xl border hover:border-green-400 cursor-pointer" onClick={()=>{handleEventsClick(sport.id.toString())}}>
               <img
                 className="w-auto h-96 object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
                 src={sport.poster} // Event image URL

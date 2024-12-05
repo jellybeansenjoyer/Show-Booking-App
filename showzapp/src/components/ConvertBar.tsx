@@ -1,10 +1,10 @@
 'use client'
-import Sports from "@/data/Sports"
+import Concert__ from "@/data/Concert"
 
-interface Sports_ {
-    sports:Sports
+interface Concert_ {
+    event:Concert__
 }
-const SportsBar : React.FC<Sports_>= ({sports}) => {
+const ConcertBar : React.FC<Concert_>= ({event}) => {
     
     return (
         <div className="relative mt-56 inset-y-64 px-12 py-8 bg-blue-950 flex items-center justify-center gap-52">
@@ -12,14 +12,14 @@ const SportsBar : React.FC<Sports_>= ({sports}) => {
                 <img className="w-7 h-7" src="/popcorn.png" />
                 <div className="flex flex-col gap-2">
                 <p className="text-white font-bold text-2xl">Price Ranges</p>
-                <p className="text-white text-2xl">{`${sports.priceRanges[0].max} - ${sports.priceRanges[0].min}`}</p>
+                <p className="text-white text-2xl">{`${event.event.ticket.price_paid}`}</p>
                 </div>
             </div> 
             <div className="items-center flex gap-4">
                 <img className="w-7 h-7" src="/time.png" />
                 <div className="flex flex-col gap-2">
-                <p className="text-white font-bold text-2xl">Location</p>
-                <p className="text-white text-2xl max-w-72">{sports._embedded.venues[0].address.line1 +" "+sports._embedded.venues[0].country.name+" "+sports._embedded.venues[0].city.name}</p>
+                <p className="text-white font-bold text-2xl">Date</p>
+                <p className="text-white text-2xl max-w-72">{event.event.event.event_date+" "+event.event.event.event_venue+" "+event.event.event.event_location}</p>
                 </div>
             </div> 
             
@@ -27,4 +27,4 @@ const SportsBar : React.FC<Sports_>= ({sports}) => {
         </div>
     );
 }
-export default SportsBar;
+export default ConcertBar;

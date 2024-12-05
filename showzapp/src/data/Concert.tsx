@@ -33,5 +33,7 @@ interface Concert {
   event: Event;
   ticket: Ticket;
 }
-
-export default Concert;
+interface Concert__ {
+    event:Concert
+}
+export default Concert__;

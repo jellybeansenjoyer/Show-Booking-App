@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import Concert from "@/data/Concert";
+import Concert from "@/data/ConcertM";
 import Event from "@/data/Event";
 import axios from "axios";
 type Movie = {
@@ -103,6 +103,9 @@ const Main = () => {
   const handleSportsClick = (sportsId: string) => {
     router.push(`/sportspage?id=${sportsId}`);
   };
+  const handleEventsClick = (concertId: string) => {
+    router.push(`/eventspage?id=${concertId}`);
+  };
   return (
     <>
     <div className="w-full h-full flex flex-col justify-center bg-main_blue px-80">
@@ -121,6 +124,7 @@ const Main = () => {
             <div
               key={index}
               className="group relative group overflow-hidden flex flex-col rounded-2xl border hover:border-green-400 cursor-pointer"
+              onClick={()=>{handleEventsClick(sport.id.toString())}}
             >
               <img
                 className="w-auto h-96 object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"

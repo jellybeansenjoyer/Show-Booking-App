@@ -1,7 +1,8 @@
 import events from "../../../database/events";
 
-export async function GET(req, { params }) {
-    const { id } = params;
+export async function GET(req, { params: paramsPromise }) {
+    const params = await paramsPromise;
+    const id = params.id;
 
     if (!id) {
         return new Response(
@@ -24,9 +25,3 @@ export async function GET(req, { params }) {
     });
 }
 
-export async function POST() {
-    return new Response(
-        JSON.stringify({ error: "Method Not Allowed" }),
-        { status: 405, headers: { "Content-Type": "application/json" } }
-    );
-}
