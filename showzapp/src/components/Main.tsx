@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Concert from '@/data/Concert';
+import Event from '@/data/Event';
 import axios from 'axios';
 type Movie = {
     id:Number,
@@ -12,30 +13,31 @@ type Movie = {
     release_date: "2024-11-27"
   };
 
-  type EventImage = {
-    url: string;
-  };
+  // type EventImage = {
+  //   url: string;
+  // };
   
-  type EventDate = {
-    start: {
-      localDate: string;
-    };
-  };
+  // type EventDate = {
+  //   start: {
+  //     localDate: string;
+  //   };
+  // };
   
-  type EventVenue = {
-    city: {
-      name: string;
-    };
-  };
+  // type EventVenue = {
+  //   city: {
+  //     name: string;
+  //   };
+  // };
   
-  type Event = {
-    name: string;
-    images: EventImage[];
-    dates: EventDate;
-    _embedded: {
-      venues: EventVenue[];
-    };
-  };
+  // type Event = {
+  //   id: string;
+  //   name: string;
+  //   images: EventImage[];
+  //   dates: EventDate;
+  //   _embedded: {
+  //     venues: EventVenue[];
+  //   };
+  // };
   
 const Main = () => {
 const router = useRouter();
@@ -100,6 +102,9 @@ useEffect(() => {
   const handleMovieClick = (movieId:string) => {
     router.push(`/moviepage?id=${movieId}`);
   };
+  const handleSportsClick = (sportsId:string) => {
+    router.push(`/sportspage?id=${sportsId}`);
+  };
     return (
         <>
         <div className="w-full h-full flex flex-col justify-center bg-main_blue px-80"> 
@@ -138,7 +143,7 @@ useEffect(() => {
                 <div className="h-0.5 bg-gray-600 mt-4 mb-8"> </div>
                 <div className="mt-4 grid grid-cols-3 gap-4">
                 {events.map((event, index) => (
-            <div key={index} className="group relative group overflow-hidden flex flex-col rounded-2xl border hover:border-green-400 cursor-pointer">
+            <div key={index} className="group relative group overflow-hidden flex flex-col rounded-2xl border hover:border-green-400 cursor-pointer" onClick={()=>handleSportsClick(event.id)}>
               <img
                 className="w-auto h-96 object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
                 src={event.images[0].url} // Event image URL
