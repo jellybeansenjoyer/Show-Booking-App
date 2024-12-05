@@ -36,10 +36,10 @@ const [movies, setMovies] = useState<Movie[]>([]);
     fetchEvents();
   }, []);
 
-  const goToAbout = () => {
-    router.push('/about');
+ 
+  const handleMovieClick = (movieId:string) => {
+    router.push(`/moviepage?id=${movieId}`);
   };
-
   return (
     <>
       <div className="w-full h-full flex flex-col justify-center bg-main_blue px-80">
@@ -49,7 +49,7 @@ const [movies, setMovies] = useState<Movie[]>([]);
         <div className="h-0.5 bg-gray-600 mt-4 mb-8"> </div>
         <div className="mt-4 grid grid-cols-3 gap-10">
           {movies.map((movie, index) => (
-            <div key={index} className="group overflow-hidden relative group flex flex-col rounded-2xl border hover:border-green-400">
+            <div key={index} className="group overflow-hidden relative group flex flex-col rounded-2xl border hover:border-green-400 cursor-pointer" onClick={()=>handleMovieClick(movie.id.toString())}>
               <img
                 className="w-auto h-96 object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
                 src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} // Event image URL
