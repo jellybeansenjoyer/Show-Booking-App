@@ -36,7 +36,6 @@ const [movies, setMovies] = useState<Movie[]>([]);
     fetchEvents();
   }, []);
 
- 
   const handleMovieClick = (movieId:string) => {
     router.push(`/moviepage?id=${movieId}`);
   };
